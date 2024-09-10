@@ -1,6 +1,6 @@
 package dto
 
-type CreateFeatureFlagDTO struct {
+type CreateAFeatureFlagDTO struct {
 	Label       string   `json:"label" binding:"required"`
 	Application string   `json:"application" binding:"required"`
 	IsEnabled   *bool    `json:"isEnabled" binding:"required"`

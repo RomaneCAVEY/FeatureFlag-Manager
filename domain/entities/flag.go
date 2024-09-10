@@ -22,7 +22,7 @@ type FeatureFlag struct {
 }
 
 func MakeFeatureFlag(projects []string, label string, isEnabled *bool, application string, owners []string, description string, user User) FeatureFlag {
-	var flag = FeatureFlag{
+	var featureFlag = FeatureFlag{
 		Slug:        slug.Make(label),
 		Label:       label,
 		IsEnabled:   *isEnabled,
@@ -36,5 +36,5 @@ func MakeFeatureFlag(projects []string, label string, isEnabled *bool, applicati
 		Description: description,
 	}
 
-	return flag
+	return featureFlag
 }

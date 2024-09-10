@@ -14,10 +14,10 @@ type Application struct {
 
 func MakeApplication(label string, description string) Application {
 	var application = Application{
-		Label:       label,
 		Description: description,
 		CreatedAt:   time.Now(),
-		UpdatedAt:   time.Now()}
+		UpdatedAt:   time.Now(),
+		Label:       label}
 
 	return application
 }

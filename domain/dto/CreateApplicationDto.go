@@ -1,6 +1,6 @@
 package dto
 
-type CreateApplicationDTO struct {
+type CreateAnApplicationDTO struct {
 	Label       string `json:"label" binding:"required"`
 	Description string `json:"description" binding:"required"`
 }

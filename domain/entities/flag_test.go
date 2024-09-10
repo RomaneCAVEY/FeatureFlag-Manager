@@ -33,9 +33,9 @@ func Test__MakeFeatureFlag_ShouldTransformSlugFromSpaceIntoHyphen(t *testing.T) 
 	owners := []string{"owner_test"}
 	services := []string{"service_test"}
 	var user = User{GivenName: "Romane", FamilyName: "Cavey"}
-	flag := MakeFeatureFlag(services, "citron is a great compagny", &value, "service", owners, "description", user)
-	if flag.Slug != "citron-is-a-great-compagny" {
-		t.Fatalf("wrong slug, expected: citron-is-a-great-compagny")
+	flag := MakeFeatureFlag(services, "Compagny is a great compagny", &value, "service", owners, "description", user)
+	if flag.Slug != "Compagny-is-a-great-compagny" {
+		t.Fatalf("wrong slug, expected: Compagny-is-a-great-compagny")
 	}
 
 }

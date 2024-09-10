@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    command: postgres -c max_connections=200
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    user: postgres
+    environment:
+      - POSTGRES_DB=feature_flag
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "feature_flag"]
+      interval: 3s
+      timeout: 30s
+      retries: 3
+    networks:
+      - feature_flag_network
+
+
+
+  my_server:
+    image: feature_server
+    container_name: feature
+    build: .
+    environment:
+      - CONFIG_JWT_PRIVATE_KEY=citron_is_great!
+    ports:
+      - "8099:8099"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - feature_flag_network
+
+networks:
+  feature_flag_network:
