@@ -1,12 +1,10 @@
 FeatureFlagManagerService is a manager of feature-flags. This project was the subject of my intership in the compagny Citron!
 I thanl them for all that I have learned.
 
-TO CREATE AND INIT A DATA BASE FOR FEATURE FLAGS (for testing API)
-To create a database:
-
+=> TO CREATE AND INIT A DATA BASE FOR FEATURE FLAGS (for testing API)
 docker run --name container_flags -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=test_feature_flag -p 5432:5432 -d postgres
 
-YOU HAVE TO CONNECT TO YOUR DOCKER CONTAINER, THEN: psql -h localhost -U postgres
+then you have to connect to your docker container, then :  psql -h localhost -U postgres
 
 AND TO CONNECT TO THE DATABASE: \c feature_flag
 
