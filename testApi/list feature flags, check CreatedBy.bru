@@ -1,0 +1,31 @@
+meta {
+  name: list feature flags, check CreatedBy
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{url}}/flags/1
+  body: none
+  auth: none
+}
+
+headers {
+  email: rcavey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+tests {
+  const statusCode = 200, expectedProperties = ["success", "statusCode", "data"], responseDatas = res.getBody();
+  test(`status code is ${statusCode}`, () => {
+     expect(res.getStatus()).to.equal(statusCode);
+  })
+  const name = "Romane Cavey";
+  test(`CreatedBy`, () => {
+     expect(responseDatas.createdBy).to.equal(name);
+  })
+  
+  
+  
+  
+}

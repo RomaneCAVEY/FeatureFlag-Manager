@@ -1,0 +1,33 @@
+meta {
+  name: list feature flags
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{url}}/flags
+  body: none
+  auth: none
+}
+
+headers {
+  email: rcavey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+tests {
+  const statusCode = 200, expectedProperties = ["success", "statusCode", "data"], responseDatas = res.getBody();
+  test(`status code is ${statusCode}`, () => {
+     expect(res.getStatus()).to.equal(statusCode);
+  })
+  //var jsonData = res.getBody();
+  
+  //res.getBody().data.forEach((i//tem, index) => {
+  //   test("data", () => {
+   //     expect(item.name).to.be.a("string", 'name is not a string');
+    // });
+  //});
+  
+  
+  
+}

@@ -1,0 +1,27 @@
+meta {
+  name: delete flag that doesn't exist
+  type: http
+  seq: 14
+}
+
+delete {
+  url: {{url}}/flags/1111
+  body: none
+  auth: none
+}
+
+headers {
+  email: rcavey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+tests {
+  test("should status code be equal to 500", function() {
+    const data = res.getBody();
+    console.log(data)
+    expect(res.getStatus()).to.equal(500);
+  });
+   
+  
+  
+}

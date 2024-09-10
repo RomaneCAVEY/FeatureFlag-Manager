@@ -1,0 +1,54 @@
+meta {
+  name: post a flag only if application exists
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url}}/flags
+  body: json
+  auth: none
+}
+
+headers {
+  email: rcaey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+body:json {
+  {
+    "label": "label",
+    "IsEnabled": true,
+    "owners": [
+      "Romane",
+      "Capucine"
+    ],
+    "application": "iot"
+  }
+}
+
+tests {
+  test("should label be equal to \"label\"", function() {
+    const data = res.getBody();
+    expect(data.label).to.equal("label");
+  });
+  test("should slug be equal to \"slug\"", function() {
+    const data = res.getBody();
+    expect(data.slug).to.equal("label");
+  });
+  test("should description be empty", function() {
+    const data = res.getBody();
+    expect(data.description).to.equal("");
+  });
+   
+  test("should application be equal to \"iot\"", function() {
+    const data = res.getBody();
+    expect(data.application).to.equal("iot");
+  });
+   
+   
+  
+  
+  
+  
+}

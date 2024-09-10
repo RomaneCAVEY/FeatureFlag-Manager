@@ -1,0 +1,44 @@
+meta {
+  name: modify feature flags
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{url}}/flags/1
+  body: json
+  auth: none
+}
+
+headers {
+  email: rcavey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+body:json {
+  { "label" : "Compagny super",
+   "isEnabled" : false
+  }
+}
+
+tests {
+  test("should status code be equal to 200", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("should be label be changed and equal to \"Compagny super \"", function() {
+    const data = res.getBody();
+    expect(data.label).to.equal("Compagny super");
+  });
+  
+  test("should be isEnabled be changed and equal to false", function() {
+    const data = res.getBody();
+    expect(data.isEnabled).to.equal(false);
+  });
+  test("should UpdatedBy be Romane cavey", function() {
+    const data = res.getBody();
+    expect(data.updatedBy).to.equal("Romane Cavey");
+  });
+  
+  
+}

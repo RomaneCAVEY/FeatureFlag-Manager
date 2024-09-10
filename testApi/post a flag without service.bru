@@ -1,0 +1,37 @@
+meta {
+  name: post a flag without "service"
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/flags
+  body: json
+  auth: none
+}
+
+headers {
+  email: rcaey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+body:json {
+  { "label" : "eYR",
+    "IsEnabled": true,
+    "owners": 
+      [
+      "Romane","Capucine"],
+   "description": "feature flag to have a pink css"
+  }
+}
+
+tests {
+  test("should status code  be equal to 400", function() {
+    const data = res.getBody();
+    console.log(data)
+    expect(res.getStatus()).to.equal(400);
+  });
+   
+  
+  
+}

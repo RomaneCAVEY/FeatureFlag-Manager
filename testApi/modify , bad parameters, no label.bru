@@ -1,0 +1,32 @@
+meta {
+  name: modify , bad parameters, no label
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{url}}/flags/1
+  body: json
+  auth: none
+}
+
+headers {
+  email: rcavey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+body:json {
+  { "isEnabled" : false
+  }
+}
+
+tests {
+  test("should status code be equal to 400", function() {
+    const data = res.getBody();
+    console.log(data)
+    expect(res.getStatus()).to.equal(400);
+  });
+   
+  
+  
+}

@@ -1,0 +1,35 @@
+meta {
+  name: post an appplication named "iot"
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/applications
+  body: json
+  auth: none
+}
+
+headers {
+  email: rcaey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+body:json {
+  {
+    "label": "iot",
+    "description":"micro service"
+  }
+}
+
+tests {
+  test("should label be equal to iot", function() {
+    const data = res.getBody();
+    expect(data.label).to.equal("iot");
+  });
+  
+  
+  
+  
+  
+}

@@ -1,0 +1,39 @@
+meta {
+  name: post a flag  with non-existent application
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/flags
+  body: json
+  auth: none
+}
+
+headers {
+  email: rcaey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+body:json {
+  {
+    "label": "label",
+    "IsEnabled": true,
+    "owners": [
+      "Romane",
+      "Capucine"
+    ],
+    "application": "iot"
+  }
+}
+
+tests {
+  test("should status code be equal to 500", function() {
+    const data = res.getBody();
+    console.log(data)
+    expect(res.getStatus()).to.equal(500);
+  });
+   
+  
+  
+}

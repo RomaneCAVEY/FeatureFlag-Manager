@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Feature Flago Tests",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

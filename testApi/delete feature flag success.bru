@@ -1,0 +1,27 @@
+meta {
+  name: delete feature flag success
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{url}}/flags/1
+  body: none
+  auth: none
+}
+
+headers {
+  email: rcavey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+tests {
+  test("should status code be equal to 200", function() {
+    const data = res.getBody();
+    console.log(data)
+    expect(res.getStatus()).to.equal(200);
+  });
+   
+  
+  
+}

@@ -1,0 +1,36 @@
+meta {
+  name: post a flag without "owners"
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/flags
+  body: json
+  auth: none
+}
+
+headers {
+  email: rcaey@Compagny.io
+  Authorization: {{jwtToken}}
+}
+
+body:json {
+  { "label":"name",
+    "IsEnabled": true,
+    "application":"iot",
+   "description": "feature flag to have a pink css",
+   "application": "iot"
+  }
+}
+
+tests {
+  test("should status code be equal to 400", function() {
+    const data = res.getBody();
+    console.log(data)
+    expect(res.getStatus()).to.equal(400);
+  });
+   
+  
+  
+}
