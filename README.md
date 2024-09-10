@@ -1,3 +1,7 @@
+THIS PROJECT IS NOT COMPLETETED
+
+
+
 FeatureFlagManagerService is a manager of feature-flags. This project was the subject of my intership in the compagny Citron!
 I thanl them for all that I have learned.
 
