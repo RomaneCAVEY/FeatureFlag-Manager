@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 )
 
 /*No sql injection possible because the user don't write in our application*/

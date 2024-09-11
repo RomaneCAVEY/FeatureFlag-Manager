@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 )
 
 type ApplicationRepository struct {

@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/dto"
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
-	mock_port "github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/port/mocks"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/dto"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
+	mock_port "github.com/RomaneCAVEY/FeatureFlag-Manager/domain/port/mocks"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

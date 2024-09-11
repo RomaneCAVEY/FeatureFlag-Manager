@@ -3,9 +3,9 @@ package service
 import (
 	"errors"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/dto"
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/port"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/dto"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/port"
 )
 
 type ApplicationManagerService struct {

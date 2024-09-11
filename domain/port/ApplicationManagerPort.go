@@ -1,8 +1,8 @@
 package port
 
 import (
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/dto"
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/dto"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 )
 
 type ApplicationManagerPort interface {

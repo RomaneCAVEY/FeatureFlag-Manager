@@ -7,8 +7,8 @@ package mock_port
 import (
 	reflect "reflect"
 
-	dto "github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/dto"
-	entities "github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	dto "github.com/RomaneCAVEY/FeatureFlag-Manager/domain/dto"
+	entities "github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 	gomock "github.com/golang/mock/gomock"
 )
 

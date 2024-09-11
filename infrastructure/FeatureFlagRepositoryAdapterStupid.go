@@ -3,7 +3,7 @@ package infrastructure
 import (
 	"errors"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 )
 
 type FeatureFlagRepositiryStupid struct {

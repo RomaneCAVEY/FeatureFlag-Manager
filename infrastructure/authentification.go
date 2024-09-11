@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 )

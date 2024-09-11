@@ -3,7 +3,7 @@ package infrastructure
 import (
 	"testing"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 )
 
 func Test_ValidateRequestFromCompagnyUser_ShouldNotValidateUser_WhenWrongEmailWithoutSymbolAt(t *testing.T) {

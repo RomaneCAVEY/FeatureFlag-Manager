@@ -1,6 +1,6 @@
 package port
 
-import "github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+import "github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 
 type FeatureFlagRepositoryPort interface {
 	Save(entities.FeatureFlag) (entities.FeatureFlag, error)

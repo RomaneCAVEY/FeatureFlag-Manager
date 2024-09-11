@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 	"github.com/stretchr/testify/assert"
 )
 

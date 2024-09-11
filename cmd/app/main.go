@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/dto"
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/service"
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/infrastructure"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/dto"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/service"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/infrastructure"
 	"github.com/gin-contrib/cors"
 
 	"github.com/gin-gonic/gin"

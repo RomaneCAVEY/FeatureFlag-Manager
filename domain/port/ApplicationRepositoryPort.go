@@ -1,7 +1,7 @@
 package port
 
 import (
-	"github.com/RomaneCAVEY/FeatureFlag-Manager/tree/main/domain/entities"
+	"github.com/RomaneCAVEY/FeatureFlag-Manager/domain/entities"
 )
 
 type ApplicationRepositoryPort interface {
