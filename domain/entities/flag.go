@@ -31,7 +31,7 @@ func MakeFeatureFlag(projects []string, label string, isEnabled *bool, applicati
 		Owners:      owners,
 		CreatedBy:   user.GivenName + " " + user.FamilyName,
 		CreatedAt:   time.Now(),
-		UpdatedAt:   time.Now()
+		UpdatedAt:   time.Now(),
 		UpdatedBy:   user.GivenName + " " + user.FamilyName,
 		Description: description,
 	}
