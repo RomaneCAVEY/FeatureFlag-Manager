@@ -1,4 +1,4 @@
-# THIS PROJECT IS NOT COMPLETED
+# THIS PROJECT IS NOT COMPLETE
 
 **FeatureFlagManagerService** is a manager of feature-flags. This project was the subject of my internship at the company **Citron**!  
 I thank them for all that I have learned.
